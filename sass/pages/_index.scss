@@ -1,0 +1,81 @@
+.menus{ /*page accueil*//*couvertures des menus*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: bottom;
+	max-width: 1048px;
+	margin: auto;
+	@media all and (max-width: 600px){ /*responsive*/
+		margin: auto;
+	}
+}
+.mask{
+	overflow: hidden;
+	box-shadow: 5px 5px 5px 5px silver;
+	margin: 20px 10px 10px 10px;
+}
+.prev{ /*pages accueil*/
+	width: 350px;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transform: scale(1);
+	transition: transform 500ms;
+	&:hover{ @include zoom;
+    }       
+}
+
+.prev-lne{ /*page accueil la note enchantee*/
+	@include color-menu__lne;
+}
+.prev-lcf{ /*page accueil le chic a la francaise*/
+	@include color-menu__lcf;
+    }
+.prev-ldp{ /*page accueil le delice des papilles*/
+	@include color-menu__ldp;		
+}
+.prev-lpg{ /*page accueil la palette du gout*/
+	@include color-menu__lpg;			
+}
+
+.couv{
+	font-size: 2em;
+	text-align: center;
+}
+.loading {/*page accueil*//*points suspensions animés*/
+	font-family: arial,verdana;
+	background: $fond;
+	color: $primarycolor;
+	padding: 10px 10px 10px 100px;
+	font-size: 2em;
+	width: 300px;
+	height: 50px;
+	border-radius: 8px;
+	margin:auto;
+	margin-bottom: 100px;
+	margin-top: 50px;
+	    &:after{ /*page accueil*//*points suspensions animés*/
+		display: inline-block;
+		animation: dotty steps(1,end) 2s infinite;
+		content: ' ';
+		}
+	@media all and (max-width: 600px){
+		width: 250px;
+		padding: 5px 5px 5px 5px;
+		 /*responsive*/
+    }
+}
+
+	@keyframes dotty{  /*page accueil*//*points suspensions animés*/
+	  0%   { content: ''; }
+	  25%  { content: '.'; }
+	  50%  { content: '..'; }
+	  75%  { content: '...'; }
+	  100% { content: ''; }
+	}
+
+
+
+    

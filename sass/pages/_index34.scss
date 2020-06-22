@@ -1,0 +1,19 @@
+.prev-lpg__titre{ /*titre 34 seulement*/
+	justify-content: center; 
+	font-family: KaushanScript, Komika;
+	background: -webkit-linear-gradient(left,rgb(61,146,58)25%, rgb(190,255,127));
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	background: -moz-gradient(linear, left, right, from rgb(61,146,58)25%, to rgb(190,255,127)); /*verifier mozilla*/
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;   	
+}
+.prev-lpg__menu{  
+   @include color-menu__lpg;		
+}
+.trait{
+	max-width: 100%;
+	@media all and (max-width: 600px){/*responsive*/
+		display: none;
+	}
+}

@@ -1,0 +1,29 @@
+@mixin zoom { /*zoom*/
+    transform: scale(1.2);
+    opacity: 0.5;
+}       
+
+@mixin color-menu__lne{ /*page accueil la note enchantee*/
+	background: #F3BF99; 
+    color: rgb(61,19,25); 
+    font-family: Montserrat;
+ }
+
+@mixin color-menu__lcf{ /*page accueil le chic a la francaise*/
+	background: #FCF2F0; 
+    color: rgb(61,19,25);
+    font-family: CantataOne;
+
+}
+
+@mixin color-menu__ldp{ /*page accueil le delice des papilles*/
+	background: #C8D9DB; 
+    color: black;
+    font-family: Caveat; 		
+}
+
+@mixin color-menu__lpg{ /*page accueil la palette du gout*/
+	background: white;
+    color: black;
+    font-family: Caveat; 			
+}	

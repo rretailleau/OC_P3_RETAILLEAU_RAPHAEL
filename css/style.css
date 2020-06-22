@@ -1,0 +1,565 @@
+@charset "UTF-8";
+@font-face {
+  /*menu 31*/
+  font-family: LeckerliOne;
+  src: url(../font/LeckerliOne-Regular.otf);
+}
+@font-face {
+  /*menu 31*/
+  font-family: Damion;
+  src: url(../font/Damion-Regular.ttf);
+}
+@font-face {
+  /*menu 31*/
+  font-family: Montserrat;
+  src: url(../font/Montserrat-Regular.ttf);
+}
+@font-face {
+  /*menu 32*/
+  font-family: Otama-ep;
+  src: url(../font/Otama-ep.otf);
+}
+@font-face {
+  /*menu 32*/
+  font-family: YesevaOne;
+  src: url(../font/YesevaOne-Regular.ttf);
+}
+@font-face {
+  /*menu 32*/
+  font-family: CantataOne;
+  src: url(../font/CantataOne-Regular.ttf);
+}
+@font-face {
+  /*menu 33*/
+  font-family: DancingScript;
+  src: url(../font/DancingScript-Bold.ttf);
+}
+@font-face {
+  /*menu 33*/
+  font-family: Pacifico;
+  src: url(../font/Pacifico.ttf);
+}
+@font-face {
+  /*menu 33 et 34*/
+  font-family: Caveat;
+  src: url(../font/Caveat-Regular.ttf) format("truetype");
+}
+@font-face {
+  /*menu 34*/
+  font-family: KaushanScript;
+  src: url(../font/KaushanScript-Regular.ttf);
+}
+@font-face {
+  /*menu 34*/
+  font-family: Komika;
+  src: url(../font/Komika_display_bold.ttf);
+}
+@font-face {
+  font-family: ComicRelief;
+  src: url(../font/ComicRelief.ttf) format("truetype");
+}
+header {
+  /*toutes les pages*/
+  background: #579c87;
+  display: flex;
+  justify-content: center;
+  height: 20%;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  /*toutes les pages*/
+  font-family: arial, verdana;
+  background: #579c87;
+  color: #fdcb46;
+  font-size: 1.5em;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+@media all and (max-width: 600px) {
+  footer {
+    /*responsive*/
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes wiggle {
+  /*toutes les pages*/
+  0% {
+    transform: translate3d(0px, 0px, 2px);
+  }
+  33% {
+    transform: translate3d(0px, 2px, 0px);
+  }
+  66% {
+    transform: translate3d(2px, 0px, 1px);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 1px);
+  }
+}
+.btn {
+  /*toutes les pages*/
+  color: #fdcb46;
+}
+.btn:hover {
+  /*toutes les pages*/
+  animation: wiggle 0.1s;
+  animation-iteration-count: 10;
+  color: #f5e227;
+}
+.btn .prev-menu {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 75px;
+  box-shadow: 5px 5px 5px silver;
+}
+.btn .prev-menu .prev-menu {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 75px;
+  box-shadow: 5px 5px 5px silver;
+}
+.btn .prev-menu .menu {
+  margin: auto;
+  width: 80%;
+  padding: 50px 0px 50px 0px;
+}
+.btn .menu {
+  margin: auto;
+  width: 80%;
+  padding: 50px 0px 50px 0px;
+}
+
+.menus {
+  /*page accueil*/
+  /*couvertures des menus*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: bottom;
+  max-width: 1048px;
+  margin: auto;
+}
+@media all and (max-width: 600px) {
+  .menus {
+    /*responsive*/
+    margin: auto;
+  }
+}
+
+.mask {
+  overflow: hidden;
+  box-shadow: 5px 5px 5px 5px silver;
+  margin: 20px 10px 10px 10px;
+}
+
+.prev {
+  /*pages accueil*/
+  width: 350px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 500ms;
+}
+.prev:hover {
+  /*zoom*/
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.prev-lne {
+  /*page accueil la note enchantee*/
+  /*page accueil la note enchantee*/
+  background: #F3BF99;
+  color: #3d1319;
+  font-family: Montserrat;
+}
+
+.prev-lcf {
+  /*page accueil le chic a la francaise*/
+  /*page accueil le chic a la francaise*/
+  background: #FCF2F0;
+  color: #3d1319;
+  font-family: CantataOne;
+}
+
+.prev-ldp {
+  /*page accueil le delice des papilles*/
+  /*page accueil le delice des papilles*/
+  background: #C8D9DB;
+  color: black;
+  font-family: Caveat;
+}
+
+.prev-lpg {
+  /*page accueil la palette du gout*/
+  /*page accueil la palette du gout*/
+  background: white;
+  color: black;
+  font-family: Caveat;
+}
+
+.couv {
+  font-size: 2em;
+  text-align: center;
+}
+
+.loading {
+  /*page accueil*/
+  /*points suspensions animés*/
+  font-family: arial, verdana;
+  background: #579c87;
+  color: #fdcb46;
+  padding: 10px 10px 10px 100px;
+  font-size: 2em;
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.loading:after {
+  /*page accueil*/
+  /*points suspensions animés*/
+  display: inline-block;
+  animation: dotty steps(1, end) 2s infinite;
+  content: " ";
+}
+@media all and (max-width: 600px) {
+  .loading {
+    width: 250px;
+    padding: 5px 5px 5px 5px;
+    /*responsive*/
+  }
+}
+
+@keyframes dotty {
+  /*page accueil*/
+  /*points suspensions animés*/
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
+}
+.note {
+  /*logo 31 seulement*/
+  font-size: 2em;
+  text-align: center;
+}
+
+.fas {
+  /*logo 31 dégradé*/
+  font-size: 2em;
+  background: -webkit-radial-gradient(bottom left, #E21247, #EF9688);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: -moz-gradient(linear, left top, left bottom, from(#EF9688), to(#E21247));
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.prev-lne__titre {
+  /*menu 31 seulement*/
+  justify-content: center;
+  font-family: Damion, LeckerliOne;
+  margin-top: 20px;
+}
+
+.prev-lne__menu {
+  /*menu 31 seulement*/
+  /*page accueil la note enchantee*/
+  background: #F3BF99;
+  color: #3d1319;
+  font-family: Montserrat;
+}
+
+.signature {
+  /*menu 31 seulement*/
+  font-family: Damion, LeckerliOne;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.trait {
+  max-width: 100%;
+}
+@media all and (max-width: 600px) {
+  .trait {
+    /*responsive*/
+    display: none;
+  }
+}
+
+.prev-lcf__titre {
+  /*titre 32 seulement*/
+  justify-content: center;
+  font-family: YesevaOne, Otama-ep;
+  background: -webkit-linear-gradient(left, #C7672C 30%, #8F3A9E 60%, #3A639E 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: -moz-gradient(linear, left, right, from(#C7672C), to(#8F3A9E), to(#3A639E));
+  /*verifier mozilla*/
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.prev-lcf__menu {
+  /*menu 32 seulement*/
+  /*page accueil le chic a la francaise*/
+  background: #FCF2F0;
+  color: #3d1319;
+  font-family: CantataOne;
+}
+
+.entrees {
+  /*menu 32 seulement*/
+  color: #C7672C;
+  margin-top: 50px;
+}
+
+.plats {
+  /*menu 32 seulement*/
+  color: #8F3A9E;
+  margin-top: 50px;
+}
+
+.desserts {
+  /*menu 32 seulement*/
+  color: #3A639E;
+  margin-top: 50px;
+}
+
+.flechedroite {
+  /*menu 32 seulement*/
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 20vw solid;
+}
+@media all and (max-width: 600px) {
+  .flechedroite {
+    /*responsive*/
+    display: none;
+  }
+}
+
+.flechedroitefin {
+  /*menu 32 seulement*/
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 1vw solid;
+}
+@media all and (max-width: 600px) {
+  .flechedroitefin {
+    /*responsive*/
+    display: none;
+  }
+}
+
+.flechegauche {
+  /*menu 32 seulement*/
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 1vw solid;
+}
+@media all and (max-width: 600px) {
+  .flechegauche {
+    /*responsive*/
+    display: none;
+  }
+}
+
+.flechegauchefin {
+  /*menu 32 seulement*/
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 20vw solid;
+}
+@media all and (max-width: 600px) {
+  .flechegauchefin {
+    /*responsive*/
+    display: none;
+  }
+}
+
+.fleche {
+  display: flex;
+  max-width: 100%;
+}
+
+.prev-ldp__menu {
+  /*page accueil le delice des papilles*/
+  background: #C8D9DB;
+  color: black;
+  font-family: Caveat;
+}
+
+.listeplats {
+  /*menu33 seulement*/
+  width: 90%;
+  margin: auto;
+}
+
+.trait33 {
+  /*menu33 seulement*/
+  width: 300px;
+  height: 5px;
+}
+@media all and (max-width: 600px) {
+  .trait33 {
+    /*responsive*/
+    display: none;
+  }
+}
+
+.prev-ldp__titre {
+  /*titre 33 seulement*/
+  justify-content: center;
+  font-family: DancingScript, Pacifico;
+  background: -webkit-linear-gradient(left, #34239E 10%, #2C5AC7 30%, #2CB7C7 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: -moz-gradient(linear, left, right, from(#34239E), to(#2C5AC7), to(#2CB7C7));
+  /*verifier mozilla*/
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.prev-lpg__titre {
+  /*titre 34 seulement*/
+  justify-content: center;
+  font-family: KaushanScript, Komika;
+  background: -webkit-linear-gradient(left, #3d923a 25%, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: -moz-gradient(linear, left, right, from #3d923a 25%, to #beff7f);
+  /*verifier mozilla*/
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.prev-lpg__menu {
+  /*page accueil la palette du gout*/
+  background: white;
+  color: black;
+  font-family: Caveat;
+}
+
+.trait {
+  max-width: 100%;
+}
+@media all and (max-width: 600px) {
+  .trait {
+    /*responsive*/
+    display: none;
+  }
+}
+
+a {
+  /*toutes les pages*/
+  text-decoration: none;
+  color: #fdcb46;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 50x;
+}
+
+h2 {
+  font-size: 1.75em;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+}
+
+h3 {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.tiret {
+  /*separateur entre les titres des menus détaillés*/
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.epd {
+  /*animation souligner les titres*/
+  text-decoration: none;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 10%, transparent 10.01%) no-repeat left bottom/0 100%;
+  transition: background-size 0.8s;
+}
+.epd:hover {
+  /*animation souligner les titres*/
+  background-size: 100% 100%;
+}
+
+.prev-menu {
+  /*format des 4 menus complets*/
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  box-shadow: 5px 5px 5px 5px silver;
+}
+@media all and (max-width: 600px) {
+  .prev-menu {
+    width: 90%;
+    /*responsive*/
+  }
+}
+
+.menu {
+  margin: auto;
+  width: 80%;
+  padding: 50px 0px 50px 0px;
+}
+
+.plat {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  line-height: 2.5em;
+}
+
+/*# sourceMappingURL=style.css.map */

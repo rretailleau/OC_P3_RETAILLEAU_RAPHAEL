@@ -1,0 +1,33 @@
+.note{ /*logo 31 seulement*/
+	font-size: 2em;
+	text-align: center;
+}
+.fas { /*logo 31 dégradé*/
+	font-size: 2em;
+	background: -webkit-radial-gradient(bottom left, #E21247, #EF9688 );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background: -moz-gradient(linear, left top, left bottom, from(#EF9688), to(#E21247));
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+}
+.prev-lne__titre{ /*menu 31 seulement*/
+	justify-content: center; 
+	font-family: Damion, LeckerliOne;
+	margin-top: 20px;
+}
+.prev-lne__menu{  /*menu 31 seulement*/
+	@include color-menu__lne;
+}
+.signature { /*menu 31 seulement*/
+	font-family: Damion, LeckerliOne;
+	font-size: 2em;
+	text-align: center;
+	margin-top: 40px;
+}
+.trait{
+	max-width: 100%;
+	@media all and (max-width: 600px){/*responsive*/
+		display: none;
+	}
+}
