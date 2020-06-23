@@ -1,15 +1,14 @@
-.note{ /*logo 31 seulement*/
-	font-size: 2em;
-	text-align: center;
-}
-.fas { /*logo 31 dégradé*/
-	font-size: 2em;
-	background: -webkit-radial-gradient(bottom left, #E21247, #EF9688 );
+.fas{ /*logo 31 dégradé*/
+	background: -webkit-radial-gradient(bottom left, $lne_logo_colorstart, $lne_logo_colorend );
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	background: -moz-gradient(linear, left top, left bottom, from(#EF9688), to(#E21247));
+	background: -moz-gradient(linear, left top, left bottom, from($lne_logo_colorend), to($lne_logo_colorstart));
 	-moz-background-clip: text;
 	-moz-text-fill-color: transparent;
+}
+.note{ /*logo 31 titre */
+	font-size: 4em;
+	text-align: center;
 }
 .prev-lne__titre{ /*menu 31 seulement*/
 	justify-content: center; 

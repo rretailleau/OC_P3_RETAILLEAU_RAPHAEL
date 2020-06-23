@@ -13,13 +13,23 @@
 		display: none;
 	}
 }
+.trait33--start {
+	background-color:$ldp_colorstart;
+	}
+.trait33--midle{
+	background-color:$ldp_colormidle;
+	}
+.trait33--end{
+	background-color:$ldp_colorend;
+	}
+	
 .prev-ldp__titre{ /*titre 33 seulement*/
 	justify-content: center; 
 	font-family: DancingScript, Pacifico;
-	background: -webkit-linear-gradient(left, #34239E 10%, #2C5AC7 30%,#2CB7C7 90%);
+	background: -webkit-linear-gradient(left,$ldp_colorstart 25%, $ldp_colormidle 50%,$ldp_colorend 75%);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
-	background: -moz-gradient(linear, left, right, from(#34239E), to(#2C5AC7), to(#2CB7C7)); /*verifier mozilla*/
+	background: -moz-gradient(linear, left, right, from($ldp_colorstart), to($ldp_colormidle), to($ldp_colorend)); /*verifier mozilla*/
 	-moz-background-clip: text;
 	-moz-text-fill-color: transparent;
 }

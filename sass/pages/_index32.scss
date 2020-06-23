@@ -2,10 +2,10 @@
 .prev-lcf__titre{ /*titre 32 seulement*/
 	justify-content: center; 
 	font-family: YesevaOne, Otama-ep;
-	background: -webkit-linear-gradient(left, #C7672C 30%, #8F3A9E 60%,#3A639E 90%);
+	background: -webkit-linear-gradient(left, $lcf_font_colorstart 25%, $lcf_font_colormidle 50%, $lcf_font_colorend 75%);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
-	background: -moz-gradient(linear, left, right, from(#C7672C), to(#8F3A9E), to(#3A639E)); /*verifier mozilla*/
+	background: -moz-gradient(linear, left, right, from($lcf_font_colorstart), to($lcf_font_colormidle), to($lcf_font_colorend)); 
 	-moz-background-clip: text;
 	-moz-text-fill-color: transparent;
 }
@@ -13,15 +13,15 @@
 	@include color-menu__lcf; 			
 }
 .entrees{/*menu 32 seulement*/
-	color: #C7672C;
+	color: $lcf_font_colorstart;
 	margin-top: 50px;
 }
 .plats{/*menu 32 seulement*/
-	color: #8F3A9E;
+	color: $lcf_font_colormidle;
 	margin-top: 50px;
 }
 .desserts{/*menu 32 seulement*/
-	color: #3A639E;
+	color: $lcf_font_colorend;
 	margin-top: 50px;
 }
 .flechedroite{/*menu 32 seulement*/

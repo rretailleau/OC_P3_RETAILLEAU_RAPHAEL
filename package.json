@@ -4,7 +4,8 @@
   "description": "ocp3retailleau",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss ./css/style.css"
+    "sass": "sass --watch ./sass/main.scss ./css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d./public/css/prefixed/"
   },
   "repository": {
     "type": "git",

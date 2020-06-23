@@ -26,7 +26,6 @@
 	&:hover{ @include zoom;
     }       
 }
-
 .prev-lne{ /*page accueil la note enchantee*/
 	@include color-menu__lne;
 }
@@ -39,7 +38,6 @@
 .prev-lpg{ /*page accueil la palette du gout*/
 	@include color-menu__lpg;			
 }
-
 .couv{
 	font-size: 2em;
 	text-align: center;
@@ -67,14 +65,13 @@
 		 /*responsive*/
     }
 }
-
-	@keyframes dotty{  /*page accueil*//*points suspensions animés*/
-	  0%   { content: ''; }
-	  25%  { content: '.'; }
-	  50%  { content: '..'; }
-	  75%  { content: '...'; }
-	  100% { content: ''; }
-	}
+@keyframes dotty{  /*page accueil*//*points suspensions animés*/
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
 
 
 

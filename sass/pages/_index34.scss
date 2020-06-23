@@ -1,10 +1,10 @@
 .prev-lpg__titre{ /*titre 34 seulement*/
 	justify-content: center; 
 	font-family: KaushanScript, Komika;
-	background: -webkit-linear-gradient(left,rgb(61,146,58)25%, rgb(190,255,127));
+	background: -webkit-linear-gradient(left,$lpg_logo_colorstart 20%, $lpg_logo_colorend);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
-	background: -moz-gradient(linear, left, right, from rgb(61,146,58)25%, to rgb(190,255,127)); /*verifier mozilla*/
+	background: -moz-gradient(linear, left, right, from $lpg_logo_colorstart 20%, to $lpg_logo_colorend); /*verifier mozilla*/
 	-moz-background-clip: text;
 	-moz-text-fill-color: transparent;   	
 }

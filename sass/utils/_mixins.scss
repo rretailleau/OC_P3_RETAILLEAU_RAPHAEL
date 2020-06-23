@@ -4,26 +4,25 @@
 }       
 
 @mixin color-menu__lne{ /*page accueil la note enchantee*/
-	background: #F3BF99; 
-    color: rgb(61,19,25); 
+	background: $lne_background_color; 
+    color: $lne_font_color;
     font-family: Montserrat;
  }
 
 @mixin color-menu__lcf{ /*page accueil le chic a la francaise*/
-	background: #FCF2F0; 
-    color: rgb(61,19,25);
+	background:$lcf_background_color; 
     font-family: CantataOne;
 
 }
 
 @mixin color-menu__ldp{ /*page accueil le delice des papilles*/
-	background: #C8D9DB; 
-    color: black;
+	background: $ldp_background_color; 
+    color: $ldp_font_color;
     font-family: Caveat; 		
 }
 
 @mixin color-menu__lpg{ /*page accueil la palette du gout*/
-	background: white;
-    color: black;
+	background: $lpg_background_color;
+    color: $lpg_font_color;
     font-family: Caveat; 			
 }	
