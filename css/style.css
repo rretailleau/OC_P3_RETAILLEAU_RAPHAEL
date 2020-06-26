@@ -768,6 +768,7 @@ a {
 }
 
 h1 {
+  font-size: 3em;
   text-align: center;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -781,7 +782,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.25em;
   text-align: center;
   margin: 10px 10px 10px 10px;
 }
@@ -791,12 +792,10 @@ h2 {
   margin-top: 50px;
   margin-bottom: 100px;
   box-shadow: 5px 5px 5px 5px silver;
-  font-size: 1.2em;
 }
 @media all and (max-width: 600px) {
   .prev-menu {
     /*responsive*/
-    font-size: 0.75em;
     width: 100%;
     box-shadow: none;
   }
@@ -819,8 +818,15 @@ h2 {
 
 .menu {
   margin: auto;
+  font-size: 1.5em;
   width: 80%;
   padding: 50px 0px 75px 0px;
+}
+@media all and (max-width: 600px) {
+  .menu {
+    /*responsive*/
+    font-size: 1em;
+  }
 }
 
 .plat {
