@@ -64,16 +64,20 @@
   src: url(../font/ComicRelief.ttf) format("truetype");
 }
 header {
-  /*toutes les pages*/
+  width: 100%;
   background: #579c87;
   display: flex;
   justify-content: center;
   height: 20%;
 }
 
-.logo {
-  max-width: 100%;
-  height: auto;
+@media all and (max-width: 600px) {
+  .logo {
+    /*responsive*/
+    min-width: 300px;
+    max-width: 300px;
+    margin: 5px 5px;
+  }
 }
 
 footer {
@@ -107,10 +111,10 @@ footer {
     transform: translate3d(0px, 2px, 0px);
   }
   66% {
-    transform: translate3d(2px, 0px, 1px);
+    transform: translate3d(2px, 0px, 0px);
   }
   100% {
-    transform: translate3d(0px, 0px, 1px);
+    transform: translate3d(0px, 0px, 2px);
   }
 }
 .btn {
@@ -124,13 +128,11 @@ footer {
 }
 
 .menus {
-  /*page accueil*/
-  /*couvertures des menus*/
+  /*couvertures des menus sur la page accueil*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: bottom;
-  max-width: 1048px;
   margin: auto;
 }
 @media all and (max-width: 600px) {
@@ -143,15 +145,22 @@ footer {
 .mask {
   overflow: hidden;
   box-shadow: 5px 5px 5px 5px silver;
-  margin: 20px 10px 10px 10px;
+  margin: 50px 50px 50px 50px;
+}
+@media all and (max-width: 600px) {
+  .mask {
+    margin: 10px 5px;
+  }
 }
 
 .prev {
-  /*pages accueil*/
-  width: 350px;
-  height: 500px;
+  /*dimension de chaque menu sur la page accueil*/
+  width: 300px;
+  height: 450px;
   display: flex;
   justify-content: center;
+  font-size: 1.7em;
+  text-align: center;
   align-items: center;
   cursor: pointer;
   transform: scale(1);
@@ -159,8 +168,14 @@ footer {
 }
 .prev:hover {
   /*zoom*/
-  transform: scale(1.2);
+  transform: scale(1.1);
   opacity: 0.5;
+}
+@media all and (max-width: 600px) {
+  .prev {
+    /*responsive*/
+    height: 300px;
+  }
 }
 
 .prev-lne {
@@ -169,6 +184,9 @@ footer {
   background: #F3BF99;
   color: #3d1319;
   font-family: Montserrat;
+}
+.prev-lne__logo {
+  font-size: 1.5em;
 }
 
 .prev-lcf {
@@ -185,6 +203,11 @@ footer {
   color: black;
   font-family: Caveat;
 }
+.prev-ldp__titre {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding: 5px;
+}
 
 .prev-lpg {
   /*page accueil la palette du gout*/
@@ -194,27 +217,30 @@ footer {
   font-family: Caveat;
 }
 
-.couv {
-  font-size: 2em;
-  text-align: center;
-}
-
-.loading {
-  /*page accueil*/
-  /*points suspensions animés*/
-  font-family: arial, verdana;
-  background: #579c87;
-  color: #fdcb46;
-  padding: 10px 10px 10px 100px;
-  font-size: 2em;
+.loading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 300px;
   height: 50px;
   border-radius: 8px;
   margin: auto;
   margin-bottom: 100px;
   margin-top: 50px;
+  background: #579c87;
 }
-.loading:after {
+.loading-wrapper .loading {
+  /*page accueil*/
+  /*points suspensions animés*/
+  font-family: arial, verdana;
+  color: #fdcb46;
+  padding: 10px 10px 10px 10px;
+  font-size: 2em;
+  min-width: 250px;
+  max-width: 250px;
+  /*responsive*/
+}
+.loading-wrapper .loading:after {
   /*page accueil*/
   /*points suspensions animés*/
   display: inline-block;
@@ -222,10 +248,9 @@ footer {
   content: " ";
 }
 @media all and (max-width: 600px) {
-  .loading {
-    width: 250px;
+  .loading-wrapper .loading {
+    width: 300px;
     padding: 5px 5px 5px 5px;
-    /*responsive*/
   }
 }
 
@@ -248,57 +273,79 @@ footer {
     content: "";
   }
 }
-.fas {
-  /*logo 31 dégradé*/
-  background: -webkit-radial-gradient(bottom left, #E21247, #EF9688);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background: -moz-gradient(linear, left top, left bottom, from(#EF9688), to(#E21247));
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-
-.note {
-  /*logo 31 titre */
-  font-size: 4em;
-  text-align: center;
-}
-
-.prev-lne__titre {
-  /*menu 31 seulement*/
-  justify-content: center;
-  font-family: Damion, LeckerliOne;
-  margin-top: 20px;
-}
-
-.prev-lne__menu {
-  /*menu 31 seulement*/
+.prev-menu__lne {
   /*page accueil la note enchantee*/
   background: #F3BF99;
   color: #3d1319;
   font-family: Montserrat;
 }
 
+.fa-music {
+  background: -webkit-radial-gradient(bottom left, #E21247, #EF9688);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.note {
+  font-size: 4em;
+  text-align: center;
+}
+
+.prev-lne__titre {
+  justify-content: center;
+  font-family: Damion, LeckerliOne;
+  margin-top: 20px;
+}
+
 .signature {
-  /*menu 31 seulement*/
   font-family: Damion, LeckerliOne;
   font-size: 2em;
   text-align: center;
   margin-top: 40px;
 }
 
-.trait {
-  max-width: 100%;
+/*pied de page*/
+.epd--lne {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.epd--lne h2 {
+  display: block;
+  position: relative;
+  margin: 0px 20px;
+}
+.epd--lne h2::after {
+  background-color: #3d1319;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.epd--lne h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 @media all and (max-width: 600px) {
-  .trait {
-    /*responsive*/
-    display: none;
+  .epd--lne {
+    min-width: 200px;
   }
 }
 
+.prev-menu__lcf {
+  /*page accueil le chic a la francaise*/
+  background: #FCF2F0;
+  font-family: CantataOne;
+}
+
 .prev-lcf__titre {
-  /*titre 32 seulement*/
   justify-content: center;
   font-family: YesevaOne, Otama-ep;
   background: -webkit-linear-gradient(left, #C7672C 25%, #8F3A9E 50%, #3A639E 75%);
@@ -307,13 +354,7 @@ footer {
   background: -moz-gradient(linear, left, right, from(#C7672C), to(#8F3A9E), to(#3A639E));
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-}
-
-.prev-lcf__menu {
-  /*menu 32 seulement*/
-  /*page accueil le chic a la francaise*/
-  background: #FCF2F0;
-  font-family: CantataOne;
+  font-size: 2.5em;
 }
 
 .entrees {
@@ -340,7 +381,7 @@ footer {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 20vw solid;
+  border-right: 15vw solid;
 }
 @media all and (max-width: 600px) {
   .flechedroite {
@@ -376,6 +417,15 @@ footer {
   .flechegauche {
     /*responsive*/
     display: none;
+    /*animation souligner les titres optionB .epd{ 
+    	text-decoration: none;
+    	  background: linear-gradient(to top, $fond, $fond, transparent 10%) no-repeat left bottom / 0 100%;
+    	  transition: background-size .8s;
+    	&:hover{ 
+    		background-size: 100% 100%;
+    	}
+    }
+    */
   }
 }
 
@@ -385,7 +435,7 @@ footer {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 20vw solid;
+  border-left: 15vw solid;
 }
 @media all and (max-width: 600px) {
   .flechegauchefin {
@@ -399,41 +449,113 @@ footer {
   max-width: 100%;
 }
 
-.prev-ldp__menu {
+.epd--lcf1 {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.epd--lcf1 h2 {
+  display: block;
+  position: relative;
+  margin: 0px 20px;
+}
+.epd--lcf1 h2::after {
+  background-color: #C7672C;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.epd--lcf1 h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media all and (max-width: 600px) {
+  .epd--lcf1 {
+    min-width: 200px;
+  }
+}
+
+.epd--lcf2 {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.epd--lcf2 h2 {
+  display: block;
+  position: relative;
+  margin: 0px 20px;
+}
+.epd--lcf2 h2::after {
+  background-color: #8F3A9E;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.epd--lcf2 h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media all and (max-width: 600px) {
+  .epd--lcf2 {
+    min-width: 200px;
+  }
+}
+
+.epd--lcf3 {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.epd--lcf3 h2 {
+  display: block;
+  position: relative;
+  margin: 0px 20px;
+}
+.epd--lcf3 h2::after {
+  background-color: #3A639E;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.epd--lcf3 h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media all and (max-width: 600px) {
+  .epd--lcf3 {
+    min-width: 200px;
+  }
+}
+
+.prev-menu__ldp {
   /*page accueil le delice des papilles*/
   background: #C8D9DB;
   color: black;
   font-family: Caveat;
-}
-
-.listeplats {
-  /*menu33 seulement*/
-  width: 90%;
-  margin: auto;
-}
-
-.trait33 {
-  /*menu33 seulement*/
-  width: 300px;
-  height: 5px;
-}
-@media all and (max-width: 600px) {
-  .trait33 {
-    /*responsive*/
-    display: none;
-  }
-}
-
-.trait33--start {
-  background-color: #34239E;
-}
-
-.trait33--midle {
-  background-color: #2C5AC7;
-}
-
-.trait33--end {
-  background-color: #2CB7C7;
 }
 
 .prev-ldp__titre {
@@ -449,6 +571,139 @@ footer {
   -moz-text-fill-color: transparent;
 }
 
+.trait-ldp {
+  /*menu33 seulement*/
+  width: 300px;
+  height: 5px;
+}
+
+.trait-ldp__1 {
+  background-color: #34239E;
+}
+
+.epd-ldp__1 {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.epd-ldp__1 h2 {
+  display: block;
+  position: relative;
+  margin: 0px 20px;
+}
+.epd-ldp__1 h2::after {
+  background-color: #34239E;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.epd-ldp__1 h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media all and (max-width: 600px) {
+  .epd-ldp__1 {
+    min-width: 200px;
+  }
+}
+
+.trait-ldp__2 {
+  background-color: #2C5AC7;
+}
+
+.epd-ldp__2 {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.epd-ldp__2 h2 {
+  display: block;
+  position: relative;
+  margin: 0px 20px;
+}
+.epd-ldp__2 h2::after {
+  background-color: #2C5AC7;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.epd-ldp__2 h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media all and (max-width: 600px) {
+  .epd-ldp__2 {
+    min-width: 200px;
+  }
+}
+
+.trait-ldp__3 {
+  background-color: #2CB7C7;
+}
+
+.epd-ldp__3 {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.epd-ldp__3 h2 {
+  display: block;
+  position: relative;
+  margin: 0px 20px;
+}
+.epd-ldp__3 h2::after {
+  background-color: #2CB7C7;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.epd-ldp__3 h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media all and (max-width: 600px) {
+  .epd-ldp__3 {
+    min-width: 200px;
+  }
+}
+
+.listeplats {
+  /*menu33 seulement*/
+  width: 90%;
+  margin: auto;
+}
+
+.prev-menu__lpg {
+  /*page accueil la palette du gout*/
+  background: #fff;
+  color: black;
+  font-family: Caveat;
+}
+
 .prev-lpg__titre {
   /*titre 34 seulement*/
   justify-content: center;
@@ -462,21 +717,48 @@ footer {
   -moz-text-fill-color: transparent;
 }
 
-.prev-lpg__menu {
-  /*page accueil la palette du gout*/
-  background: #fff;
-  color: black;
-  font-family: Caveat;
+.epd--lpg {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.trait {
-  max-width: 100%;
+.epd--lpg h2 {
+  display: block;
+  position: relative;
+  margin: 0px 20px;
+}
+.epd--lpg h2::after {
+  background-color: #3d923a;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: transform 1s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.epd--lpg h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 @media all and (max-width: 600px) {
-  .trait {
-    /*responsive*/
-    display: none;
+  .epd--lpg {
+    min-width: 200px;
   }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1048px;
+  margin: auto;
 }
 
 a {
@@ -486,20 +768,38 @@ a {
 }
 
 h1 {
-  font-size: 3em;
   text-align: center;
-  margin-bottom: 50x;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+@media all and (max-width: 600px) {
+  h1 {
+    /*responsive*/
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.2em;
   text-align: center;
   margin: 10px 10px 10px 10px;
 }
 
-h3 {
-  font-size: 1.25em;
-  text-align: center;
+.prev-menu {
+  /*format des 4 menus complets*/
+  margin-top: 50px;
+  margin-bottom: 100px;
+  box-shadow: 5px 5px 5px 5px silver;
+  font-size: 1.2em;
+}
+@media all and (max-width: 600px) {
+  .prev-menu {
+    /*responsive*/
+    font-size: 0.75em;
+    width: 100%;
+    box-shadow: none;
+  }
 }
 
 .tiret {
@@ -508,46 +808,29 @@ h3 {
   flex-wrap: no-wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-}
-
-.epd {
-  /*animation souligner les titres*/
-  text-decoration: none;
-  background: linear-gradient(to top, #579c87 10%, #579c87 10%, transparent 10%) no-repeat left bottom/0 100%;
-  transition: background-size 0.8s;
-}
-.epd:hover {
-  /*animation souligner les titres*/
-  background-size: 100% 100%;
-}
-
-.prev-menu {
-  /*format des 4 menus complets*/
-  max-width: 1200px;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  box-shadow: 5px 5px 5px 5px silver;
+  margin: 50px 0px 50px 0px;
 }
 @media all and (max-width: 600px) {
-  .prev-menu {
-    width: 90%;
+  .tiret {
     /*responsive*/
+    margin: 25px 0px 25px 0px;
   }
 }
 
 .menu {
   margin: auto;
   width: 80%;
-  padding: 50px 0px 50px 0px;
+  padding: 50px 0px 75px 0px;
 }
 
 .plat {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5em;
   line-height: 2.5em;
+}
+
+.trait {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

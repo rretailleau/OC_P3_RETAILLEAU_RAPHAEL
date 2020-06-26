@@ -1,0 +1,42 @@
+.prev-menu__ldp{ 
+	@include color-menu__ldp;
+}
+.prev-ldp__titre{ /*titre 33 seulement*/
+	justify-content: center; 
+	font-family: DancingScript, Pacifico;
+	background: -webkit-linear-gradient(left,$ldp_colorstart 25%, $ldp_colormidle 50%,$ldp_colorend 75%);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	background: -moz-gradient(linear, left, right, from($ldp_colorstart), to($ldp_colormidle), to($ldp_colorend)); /*verifier mozilla*/
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+}
+.trait-ldp{ /*menu33 seulement*/
+	width: 300px;
+	height: 5px;
+}
+.trait-ldp__1 {
+	background-color:$ldp_colorstart;
+	}
+.epd-ldp__1{
+		@include souligne ($ldp_colorstart);
+}
+.trait-ldp__2{
+	background-color:$ldp_colormidle;
+	}
+.epd-ldp__2{
+		@include souligne ($ldp_colormidle);
+	}
+.trait-ldp__3{
+	background-color:$ldp_colorend;
+	}
+.epd-ldp__3{
+		@include souligne ($ldp_colorend);
+	}
+
+
+.listeplats{ /*menu33 seulement*/
+	width: 90%;
+	margin: auto;
+}
+

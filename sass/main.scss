@@ -1,75 +1,76 @@
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
-@import "./utils/extensions";
-
-@import "./base/base";
 @import "./base/typography";
-
-@import "./components/buttons";
-
 @import "./layout/header";
 @import "./layout/footer";
-@import "./layout/container";
-
 @import "./pages/index";
-@import "./pages/index31";
-@import "./pages/index32";
-@import "./pages/index33";
-@import "./pages/index34";
+@import "./pages/index-lne";
+@import "./pages/index-lcf";
+@import "./pages/index-ldp";
+@import "./pages/index-lpg";
 @import "./pages/mentionslegales";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+.container{
+	max-width: 1048px;
+	margin: auto;
+}
 
 a{ /*toutes les pages*/
 	text-decoration: none;
 	color: $primarycolor; 
 }
 h1{
-	font-size: 3em;
+	
 	text-align: center;
-	margin-bottom: 50x;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	@media all and (max-width: 600px){/*responsive*/
+		margin-block-start: .5em;
+		margin-block-end: .5em;
+	}
 } 
 h2{
-	font-size: 1.75em;
+	font-size: 1.2em;
 	text-align: center;
 	margin: 10px 10px 10px 10px;
 }
-h3{
- 	font-size: 1.25em;
-	text-align: center;
+
+.prev-menu{ /*format des 4 menus complets*/
+	margin-top: 50px;
+	margin-bottom: 100px;
+	box-shadow:5px 5px 5px 5px silver;
+	font-size: 1.2em;
+	@media all and (max-width: 600px){/*responsive*/
+		font-size: .75em;
+		width: 100%;
+		box-shadow: none;
+	}
 }
+
 .tiret{ /*separateur entre les titres des menus détaillés*/
 	display: flex;
 	flex-wrap: no-wrap;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 20px;
-}
-.epd{ /*animation souligner les titres*/
- 	text-decoration: none;
-  	background: linear-gradient(to top, $fond 10%, $fond 10%, transparent 10%) no-repeat left bottom / 0 100%;
-  	transition: background-size .8s;
-    &:hover{ /*animation souligner les titres*/
-		background-size: 100% 100%;
-    }
-}
-.prev-menu{ /*format des 4 menus complets*/
-	max-width: 1200px;
-	margin: auto;
-	margin-top: 50px;
-	margin-bottom: 100px;
-	box-shadow:5px 5px 5px 5px silver;
-	@media all and (max-width: 600px){ 
-		width: 90%;/*responsive*/
+	margin: 50px 0px 50px 0px;
+	@media all and (max-width: 600px){/*responsive*/
+		margin: 25px 0px 25px 0px;
 	}
 }
 .menu{ 
 	margin: auto;
 	width: 80%;
-	padding: 50px 0px 50px 0px;
+	padding: 50px 0px 75px 0px;
 }
 .plat{
 	display: flex;
 	justify-content: space-between;
-	font-size: 1.5em;
 	line-height: 2.5em;
 }	
+.trait{
+		max-width: 100%;
+}

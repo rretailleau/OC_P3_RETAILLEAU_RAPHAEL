@@ -1,5 +1,7 @@
-
-.prev-lcf__titre{ /*titre 32 seulement*/
+.prev-menu__lcf{ 
+	@include color-menu__lcf; 			
+}
+.prev-lcf__titre{ 
 	justify-content: center; 
 	font-family: YesevaOne, Otama-ep;
 	background: -webkit-linear-gradient(left, $lcf_font_colorstart 25%, $lcf_font_colormidle 50%, $lcf_font_colorend 75%);
@@ -8,10 +10,9 @@
 	background: -moz-gradient(linear, left, right, from($lcf_font_colorstart), to($lcf_font_colormidle), to($lcf_font_colorend)); 
 	-moz-background-clip: text;
 	-moz-text-fill-color: transparent;
+	font-size: 2.5em;
 }
-.prev-lcf__menu{ /*menu 32 seulement*/  
-	@include color-menu__lcf; 			
-}
+
 .entrees{/*menu 32 seulement*/
 	color: $lcf_font_colorstart;
 	margin-top: 50px;
@@ -29,7 +30,7 @@
 	height: 0;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent;
-	border-right: 20vw solid;
+	border-right: 15vw solid;
 	@media all and (max-width: 600px){/*responsive*/
 		display: none;
 	}
@@ -52,6 +53,15 @@
 	border-right: 1vw solid;
 	@media all and (max-width: 600px){/*responsive*/
 		display: none;
+		/*animation souligner les titres optionB .epd{ 
+			text-decoration: none;
+			  background: linear-gradient(to top, $fond, $fond, transparent 10%) no-repeat left bottom / 0 100%;
+			  transition: background-size .8s;
+			&:hover{ 
+				background-size: 100% 100%;
+			}
+		}
+		*/
 	}
 }
 .flechegauchefin { /*menu 32 seulement*/
@@ -59,7 +69,7 @@
 	height: 0;
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent;
-	border-left: 20vw solid;
+	border-left: 15vw solid;
 	@media all and (max-width: 600px){/*responsive*/
 		display: none;
 	}
@@ -68,4 +78,13 @@
 .fleche {
 	display: flex;
 	max-width: 100%;
+}
+.epd--lcf1{
+	@include souligne ($lcf_font_colorstart);
+}
+.epd--lcf2{
+	@include souligne ($lcf_font_colormidle);
+}
+.epd--lcf3{
+	@include souligne ($lcf_font_colorend);
 }

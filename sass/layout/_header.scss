@@ -1,10 +1,14 @@
-header{ /*toutes les pages*/
+header{
+	width: 100%;
 	background: $fond;
 	display: flex;
 	justify-content: center;
 	height: 20%;
 }
 .logo { 
-	max-width: 100%;
-	height: auto;
+	@media all and (max-width: 600px){/*responsive*/
+		min-width: 300px;
+		max-width: 300px;
+		margin: 5px 5px;
+	}
 }

@@ -1,3 +1,7 @@
+.prev-menu__lpg{  
+	@include color-menu__lpg;		
+ }
+ 
 .prev-lpg__titre{ /*titre 34 seulement*/
 	justify-content: center; 
 	font-family: KaushanScript, Komika;
@@ -8,12 +12,7 @@
 	-moz-background-clip: text;
 	-moz-text-fill-color: transparent;   	
 }
-.prev-lpg__menu{  
-   @include color-menu__lpg;		
-}
-.trait{
-	max-width: 100%;
-	@media all and (max-width: 600px){/*responsive*/
-		display: none;
-	}
+
+.epd--lpg{
+	@include souligne ($lpg_logo_colorstart);
 }

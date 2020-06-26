@@ -1,0 +1,27 @@
+.prev-menu__lne{  
+	@include color-menu__lne;
+}
+.fa-music{ 
+	background: -webkit-radial-gradient(bottom left, $lne_logo_colorstart, $lne_logo_colorend );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.note{
+	font-size: 4em;
+	text-align: center;
+}
+.prev-lne__titre{ 
+	justify-content: center;
+	font-family: Damion, LeckerliOne;
+	margin-top: 20px;
+}
+.signature {
+	font-family: Damion, LeckerliOne;
+	font-size: 2em;
+	text-align: center;
+	margin-top: 40px;
+} /*pied de page*/
+
+.epd--lne{
+	@include souligne ($lne_font_color);
+}

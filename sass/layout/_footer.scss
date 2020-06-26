@@ -19,8 +19,8 @@ footer{ /*toutes les pages*/
 @keyframes wiggle{ /*toutes les pages*/
     0% { transform: translate3d(0px, 0px, 2px); }
     33% { transform: translate3d(0px, 2px, 0px); }
-    66% { transform: translate3d(2px, 0px, 1px); }
-    100% { transform: translate3d(0px, 0px, 1px); }
+    66% { transform: translate3d(2px, 0px, 0px); }
+    100% { transform: translate3d(0px, 0px, 2px); }
 }
 .btn{ /*toutes les pages*/
     color: $primarycolor;
