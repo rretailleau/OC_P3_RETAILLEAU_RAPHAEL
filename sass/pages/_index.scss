@@ -3,7 +3,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	align-items: bottom;
 	margin: auto;
 	@media all and (max-width: 600px){ /*responsive*/
 		margin: auto;
@@ -47,8 +46,6 @@
 .prev-ldp{ /*page accueil le delice des papilles*/
 	@include color-menu__ldp;
 	&__titre{
-	margin-block-start: 0em;
-	margin-block-end: 0em;
 	padding: 5px;
 	}	
 }

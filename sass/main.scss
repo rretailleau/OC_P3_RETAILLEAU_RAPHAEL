@@ -24,14 +24,8 @@ a{ /*toutes les pages*/
 	color: $primarycolor; 
 }
 h1{
-	font-size: 3em;
+	font-size: 2em;
 	text-align: center;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	@media all and (max-width: 600px){/*responsive*/
-		margin-block-start: .5em;
-		margin-block-end: .5em;
-	}
 } 
 h2{
 	font-size: 1.25em;
@@ -51,13 +45,16 @@ h2{
 
 .tiret{ /*separateur entre les titres des menus détaillés*/
 	display: flex;
-	flex-wrap: no-wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
 	margin: 50px 0px 50px 0px;
 	@media all and (max-width: 600px){/*responsive*/
 		margin: 25px 0px 25px 0px;
 	}
+}
+.trait{
+	max-width: 100%;
 }
 .menu{ 
 	margin: auto;
@@ -71,8 +68,9 @@ h2{
 .plat{
 	display: flex;
 	justify-content: space-between;
-	line-height: 2.5em;
+	line-height: 2em;
+	@media all and (max-width: 600px){/*responsive*/
+		line-height: normal;
+	}
 }	
-.trait{
-		max-width: 100%;
-}
+

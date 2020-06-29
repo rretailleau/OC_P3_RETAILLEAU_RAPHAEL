@@ -132,7 +132,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: bottom;
   margin: auto;
 }
 @media all and (max-width: 600px) {
@@ -204,8 +203,6 @@ footer {
   font-family: Caveat;
 }
 .prev-ldp__titre {
-  margin-block-start: 0em;
-  margin-block-end: 0em;
   padding: 5px;
 }
 
@@ -354,29 +351,24 @@ footer {
   background: -moz-gradient(linear, left, right, from(#C7672C), to(#8F3A9E), to(#3A639E));
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  font-size: 2.5em;
 }
 
 .entrees {
-  /*menu 32 seulement*/
   color: #C7672C;
   margin-top: 50px;
 }
 
 .plats {
-  /*menu 32 seulement*/
   color: #8F3A9E;
   margin-top: 50px;
 }
 
 .desserts {
-  /*menu 32 seulement*/
   color: #3A639E;
   margin-top: 50px;
 }
 
 .flechedroite {
-  /*menu 32 seulement*/
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
@@ -417,20 +409,10 @@ footer {
   .flechegauche {
     /*responsive*/
     display: none;
-    /*animation souligner les titres optionB .epd{ 
-    	text-decoration: none;
-    	  background: linear-gradient(to top, $fond, $fond, transparent 10%) no-repeat left bottom / 0 100%;
-    	  transition: background-size .8s;
-    	&:hover{ 
-    		background-size: 100% 100%;
-    	}
-    }
-    */
   }
 }
 
 .flechegauchefin {
-  /*menu 32 seulement*/
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
@@ -751,6 +733,11 @@ footer {
   }
 }
 
+.ml-text {
+  padding: 10px 10px 10px 10px;
+  word-wrap: break-word;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -768,17 +755,8 @@ a {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
-@media all and (max-width: 600px) {
-  h1 {
-    /*responsive*/
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-  }
 }
 
 h2 {
@@ -804,7 +782,7 @@ h2 {
 .tiret {
   /*separateur entre les titres des menus détaillés*/
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   margin: 50px 0px 50px 0px;
@@ -814,6 +792,10 @@ h2 {
     /*responsive*/
     margin: 25px 0px 25px 0px;
   }
+}
+
+.trait {
+  max-width: 100%;
 }
 
 .menu {
@@ -832,11 +814,13 @@ h2 {
 .plat {
   display: flex;
   justify-content: space-between;
-  line-height: 2.5em;
+  line-height: 2em;
 }
-
-.trait {
-  max-width: 100%;
+@media all and (max-width: 600px) {
+  .plat {
+    /*responsive*/
+    line-height: normal;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

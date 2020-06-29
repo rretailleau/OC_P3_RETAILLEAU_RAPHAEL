@@ -10,22 +10,21 @@
 	background: -moz-gradient(linear, left, right, from($lcf_font_colorstart), to($lcf_font_colormidle), to($lcf_font_colorend)); 
 	-moz-background-clip: text;
 	-moz-text-fill-color: transparent;
-	font-size: 2.5em;
 }
 
-.entrees{/*menu 32 seulement*/
+.entrees{
 	color: $lcf_font_colorstart;
 	margin-top: 50px;
 }
-.plats{/*menu 32 seulement*/
+.plats{
 	color: $lcf_font_colormidle;
 	margin-top: 50px;
 }
-.desserts{/*menu 32 seulement*/
+.desserts{
 	color: $lcf_font_colorend;
 	margin-top: 50px;
 }
-.flechedroite{/*menu 32 seulement*/
+.flechedroite{
 	width: 0;
 	height: 0;
 	border-top: 5px solid transparent;
@@ -53,18 +52,9 @@
 	border-right: 1vw solid;
 	@media all and (max-width: 600px){/*responsive*/
 		display: none;
-		/*animation souligner les titres optionB .epd{ 
-			text-decoration: none;
-			  background: linear-gradient(to top, $fond, $fond, transparent 10%) no-repeat left bottom / 0 100%;
-			  transition: background-size .8s;
-			&:hover{ 
-				background-size: 100% 100%;
-			}
-		}
-		*/
 	}
 }
-.flechegauchefin { /*menu 32 seulement*/
+.flechegauchefin {
 	width: 0;
 	height: 0;
 	border-top: 5px solid transparent;
